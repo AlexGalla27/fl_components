@@ -1,3 +1,4 @@
+import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,10 +7,24 @@ class HomeScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-         child: Text('HomeScreen'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Componentes de Flutter'),
+        elevation: 50,
       ),
+      body: ListView.separated(
+        itemBuilder: (context, index) => ListTile(
+          leading: Icon(Icons.mark_chat_read_outlined),
+          title: Text('Nombre de ruta'),
+          onTap: () {
+            //final route = MaterialPageRoute(builder: (context) => Listview1Screen(),);
+            //Navigator.pushReplacement(context, route);
+            Navigator.pushNamed(context, 'cord');
+          },
+        ), 
+        separatorBuilder: (context, index) => Divider(), 
+        itemCount: 5
+      )
     );
   }
 }
