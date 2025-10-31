@@ -15,14 +15,13 @@ class Listview2Screen extends StatelessWidget {
         ,
         ),
       
-      body: ListView(
-        children: [
-          ...options.map((e) => ListTile(
-            trailing: Icon(Icons.arrow_forward_ios_outlined),
-            title: Text(e),
-            ),).toList()
-          
-        ],
+      body: ListView.separated(
+        itemBuilder: (context, index) => ListTile(
+          trailing: Icon(Icons.arrow_forward_ios_outlined),
+          title: Text(options[index]),
+        ),
+        separatorBuilder: (context, index) => const Divider(),
+        itemCount: options.length,
       ),
     );
   }
