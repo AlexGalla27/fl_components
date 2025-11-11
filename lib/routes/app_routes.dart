@@ -1,4 +1,5 @@
 import 'package:fl_components/models/models.dart';
+import 'package:fl_components/screens/mates.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +26,12 @@ class AppRoutes {
       screen: const Listview2Screen()
     ),
     MenuOption(
+      route: 'mates', 
+      icon: Icons.book, 
+      name: 'mates', 
+      screen: const MatesScreen()
+    ),
+    MenuOption(
       route: 'alert', 
       icon: Icons.add_alert_outlined, 
       name: 'Alertas', 
@@ -36,6 +43,15 @@ class AppRoutes {
       name: 'Cards', 
       screen: const CardScreen()
     ),
+  ];
+
+  static final LibrosCole = <MenuOption>[
+    MenuOption(
+          route: 'card', 
+          icon: Icons.card_travel_outlined, 
+          name: 'Cards', 
+          screen: const CardScreen()
+        ),
   ];
 
 
