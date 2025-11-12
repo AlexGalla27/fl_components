@@ -1,4 +1,5 @@
 import 'package:fl_components/models/models.dart';
+import 'package:fl_components/screens/ciencias_screen.dart';
 import 'package:fl_components/screens/mates.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
@@ -47,10 +48,28 @@ class AppRoutes {
 
   static final LibrosCole = <MenuOption>[
     MenuOption(
-          route: 'card', 
+          route: 'Mates', 
           icon: Icons.card_travel_outlined, 
-          name: 'Cards', 
-          screen: const CardScreen()
+          name: 'Mates', 
+          screen: const MatesScreen()
+        ),
+        MenuOption(
+          route: 'Ciencias', 
+          icon: Icons.card_travel_outlined, 
+          name: 'Ciencias', 
+          screen: const CienciasScreen()
+        ),
+        MenuOption(
+          route: 'Lengua', 
+          icon: Icons.card_travel_outlined, 
+          name: 'Lengua', 
+          screen: const CienciasScreen()
+        ),
+        MenuOption(
+          route: 'Ingles', 
+          icon: Icons.card_travel_outlined, 
+          name: 'Ingles', 
+          screen: const CienciasScreen()
         ),
   ];
 
