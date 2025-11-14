@@ -1,36 +1,31 @@
-import 'package:fl_components/models/menu_options.dart';
-import 'package:fl_components/screens/mates.dart';
 import 'package:fl_components/routes/app_routes.dart';
+import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
-class LibrosCole extends StatelessWidget {
-
-  final options = const['Mates', 'Lengua', 'Ciencias' , 'Ingles'];
+class LibrosColeScreen extends StatelessWidget {
    
-  const LibrosCole({Key? key}) : super(key: key);
+  const LibrosColeScreen({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text('Libros'),
-        //backgroundColor: Colors.pink
-        
-        ),
-      
-       body: ListView.separated(
-        itemBuilder: (context, index) => ListTile(
-          leading: Icon(AppRoutes.MenuOptions[index].icon),
-          title: Text(AppRoutes.MenuOptions[index].name),
-          trailing: const Icon(Icons.arrow_forward_ios_outlined),
-          onTap: () => Navigator.pushNamed(
-            context,
-            AppRoutes.MenuOptions[index].route,
-          ),
-        ),
-        separatorBuilder: (_, __) => const Divider(),
-        itemCount: AppRoutes.MenuOptions.length,
+        title: Text('Libros de Flutter'),
+        elevation: 50,
       ),
+      body: ListView.separated(
+        itemBuilder: (context, index) => ListTile(
+          leading: Icon(AppRoutes.LibrosCole[index].icon),
+          title: Text(AppRoutes.LibrosCole[index].name),
+          onTap: () {
+            //final route = MaterialPageRoute(builder: (context) => Listview1Screen(),);
+            //Navigator.pushReplacement(context, route);
+            Navigator.pushNamed(context, AppRoutes.LibrosCole[index].route);
+          },
+        ), 
+        separatorBuilder: (context, index) => Divider(), 
+        itemCount: AppRoutes.LibrosCole.length
+      )
     );
   }
 }

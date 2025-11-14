@@ -13,7 +13,7 @@ class MatesScreen extends StatelessWidget {
         title: Text('Hola'),
       ),
       body: Center(
-         child: Text('AlertScreen'),
+         child: Text('HOla que tal'),
       ),
     );
   }

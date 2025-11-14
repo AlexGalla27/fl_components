@@ -1,6 +1,6 @@
 import 'package:fl_components/models/models.dart';
 import 'package:fl_components/screens/ciencias_screen.dart';
-import 'package:fl_components/screens/mates.dart';
+import 'package:fl_components/screens/mates_screen.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -27,12 +27,6 @@ class AppRoutes {
       screen: const Listview2Screen()
     ),
     MenuOption(
-      route: 'mates', 
-      icon: Icons.book, 
-      name: 'mates', 
-      screen: const MatesScreen()
-    ),
-    MenuOption(
       route: 'alert', 
       icon: Icons.add_alert_outlined, 
       name: 'Alertas', 
@@ -44,9 +38,16 @@ class AppRoutes {
       name: 'Cards', 
       screen: const CardScreen()
     ),
+    
   ];
 
   static final LibrosCole = <MenuOption>[
+    MenuOption(
+          route: 'Home', 
+          icon: Icons.card_travel_outlined, 
+          name: 'Home', 
+          screen: const LibrosColeScreen()
+        ),
     MenuOption(
           route: 'Mates', 
           icon: Icons.card_travel_outlined, 
@@ -76,7 +77,7 @@ class AppRoutes {
 
   static Map<String, Widget Function(BuildContext) > getAppRoutes(){
     Map<String, Widget Function(BuildContext) > appRoutes = {};
-
+    
     for ( final option in MenuOptions ) {
       appRoutes.addAll({option.route : ( BuildContext context ) => option.screen});
     }
