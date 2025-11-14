@@ -18,7 +18,12 @@ class CardScreen extends StatelessWidget {
           children: [
             CustomCardTipo1(),
             SizedBox(height: 20,),
-            CustomCardTipo2(),
+            CustomCardTipo2(imagenUrl: 'https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/andalucia/trekking-sierra-nevada-c-turismo-granada.jpg',),
+            SizedBox(height: 20,),
+            CustomCardTipo2(nombre: 'Virgen de las nieves', imagenUrl: 'https://sierranevadagranada.com/images/sierra-nevada-114-126586.jpg',),
+            SizedBox(height: 20,),
+            CustomCardTipo2(nombre: 'Paisaje', imagenUrl: 'https://media-cdn.tripadvisor.com/media/photo-c/1280x250/12/f4/e1/46/in-the-sierra-nevada.jpg'),
+            
           ],
         ),
       ),
