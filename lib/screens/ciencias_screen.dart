@@ -1,5 +1,3 @@
-import 'package:fl_components/routes/app_routes.dart';
-import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class CienciasScreen extends StatelessWidget {
