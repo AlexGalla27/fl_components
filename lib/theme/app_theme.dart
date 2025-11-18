@@ -21,7 +21,24 @@ class AppTheme {
         //Estilo de los boton de la aplicacion
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(foregroundColor: Colors.green),
+        ),
+
+
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        backgroundColor: primary,
+        foregroundColor: Colors.white,
+        elevation: 5,
+      ),
+
+
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: AppTheme.primary,
+          shadowColor: Colors.red
+          //backgroundColor: AppTheme.primary
         )
+      )
+
 
       );
 }
