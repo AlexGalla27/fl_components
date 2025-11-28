@@ -38,6 +38,24 @@ class AppRoutes {
       name: 'Cards', 
       screen: const CardScreen()
     ),
+    MenuOption(
+      route: 'avatar', 
+      icon: Icons.supervised_user_circle_outlined, 
+      name: 'Avatar', 
+      screen: const AvatarScreen()
+    ),
+    MenuOption(
+      route: 'container', 
+      icon: Icons.inbox_sharp, 
+      name: 'Container', 
+      screen: const ContainerScreen()
+    ),
+    MenuOption(
+      route: 'inputs', 
+      icon: Icons.input_rounded, 
+      name: 'Forms: Inputs', 
+      screen: const InputsScreen()
+    ),
     
   ];
 
